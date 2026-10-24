@@ -1,2 +1,0 @@
-- name: Free Disk Space (Ubuntu)
-  uses: jlumbroso/free-disk-space@v2.0.0
