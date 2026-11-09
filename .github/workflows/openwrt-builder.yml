@@ -29,7 +29,7 @@ env:
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  SSH_ACTIONS: true
+  SSH_ACTIONS: true # 增加了在线编译.config功能
 
 jobs:
   build:
@@ -84,7 +84,7 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
-    - name: Setup tmate session
+    - name: Setup tmate session  # 增加了在线编译.config功能
       if: env.SSH_ACTIONS == 'true'
       uses: mxschmitt/action-tmate@v3
       timeout-minutes: 60
